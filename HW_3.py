@@ -3,6 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 import matplotlib.pyplot as plt
+from statsmodels.nonparametric.smoothers_lowess import lowess
 
 st.title('CMSE HW 3')
 st.caption('EDA on various datasets')
@@ -43,7 +44,7 @@ st.subheader('Catplot')
 st.pyplot(sns.catplot(df_heart, x="slope", y="thalach",hue='target', kind="swarm").figure)
 
 st.subheader('Lmplot')
-st.pyplot(sns.lmplot(x="age", y="oldpeak", hue="target", col="target", data=df_heart).figure)
+st.pyplot(sns.lmplot(x="age", y="oldpeak", hue="target", col="target",lowess=True, data=df_heart).figure)
 
 #st.subheader('')
 #st.pyplot(.figure)
