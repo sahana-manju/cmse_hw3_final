@@ -1,4 +1,4 @@
 pandas
 seaborn
 matplotlib
-git+https://github.com/statsmodels/statsmodels
+statsmodels
