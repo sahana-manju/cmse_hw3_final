@@ -9,9 +9,9 @@ st.caption('EDA on various datasets')
 st.text('Sahana Manjunath')
 st.divider()
 
-df_heart=pd.read_csv('/Users/sahanamanjunath/Downloads/heart.csv')
-df_emp=pd.read_csv('/Users/sahanamanjunath/Downloads/Employee.csv')
-df_cancer = pd.read_csv('/Users/sahanamanjunath/Downloads/data.csv')
+df_heart=pd.read_csv('heart.csv')
+df_emp=pd.read_csv('Employee.csv')
+df_cancer = pd.read_csv('data.csv')
 
 st.subheader('EDA on Heart Disease Dataset')
 
