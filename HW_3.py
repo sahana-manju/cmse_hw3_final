@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 import matplotlib.pyplot as plt
-from statsmodels.nonparametric.smoothers_lowess import lowess
+#from statsmodels.nonparametric.smoothers_lowess import lowess
 
 st.title('CMSE HW 3')
 st.caption('EDA on various datasets')
