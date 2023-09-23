@@ -57,7 +57,8 @@ st.pyplot(h.hist_plot(df_emp))
 
 st.subheader('Heatmap')
 plt.figure(figsize=(10,5))
-st.pyplot(sns.heatmap(df_emp.corr(), annot=True, cmap="crest").figure)
+df_emp1=df_emp.select_dtypes(include=['number'])
+st.pyplot(sns.heatmap(df_emp1.corr(), annot=True, cmap="crest").figure)
 
 st.subheader('Displot')
 st.pyplot(sns.displot(df_emp, x="Age", hue = "LeaveOrNot", col="LeaveOrNot", kind="kde",rug=True).figure)
