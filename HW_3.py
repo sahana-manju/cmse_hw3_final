@@ -75,7 +75,7 @@ st.subheader('EDA on Breast Cancer Dataset')
 
 st.subheader('Heatmap')
 plt.figure(figsize=(32,30))
-df_cancer1=df_cancer1.select_dtypes(include=['number'])
+df_cancer1=df_cancer.select_dtypes(include=['number'])
 st.pyplot(sns.heatmap(df_cancer1.corr(), annot=True, cmap="crest").figure)
 
 #Distribution
