@@ -31,7 +31,7 @@ st.pyplot(h.hist_plot(df_heart))
 
 st.subheader('Heatmap')
 plt.figure(figsize=(25,15))
-df_heart1=df_heart1.select_dtypes(include=['number'])
+df_heart1=df_heart.select_dtypes(include=['number'])
 st.pyplot(sns.heatmap(df_heart1.corr(), annot=True, cmap="crest").figure)
 st.divider()
 
