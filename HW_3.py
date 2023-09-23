@@ -31,7 +31,8 @@ st.pyplot(h.hist_plot(df_heart))
 
 st.subheader('Heatmap')
 plt.figure(figsize=(25,15))
-st.pyplot(sns.heatmap(df_heart.corr(), annot=True, cmap="crest").figure)
+df_heart1=df_heart1.select_dtypes(include=['number'])
+st.pyplot(sns.heatmap(df_heart1.corr(), annot=True, cmap="crest").figure)
 st.divider()
 
 st.subheader('Displot')
@@ -74,7 +75,8 @@ st.subheader('EDA on Breast Cancer Dataset')
 
 st.subheader('Heatmap')
 plt.figure(figsize=(32,30))
-st.pyplot(sns.heatmap(df_cancer.corr(), annot=True, cmap="crest").figure)
+df_cancer1=df_cancer1.select_dtypes(include=['number'])
+st.pyplot(sns.heatmap(df_cancer1.corr(), annot=True, cmap="crest").figure)
 
 #Distribution
 st.subheader('Distribution plot')
@@ -95,7 +97,8 @@ st.subheader('EDA on mpg Dataset')
 
 st.subheader('Heatmap')
 plt.figure(figsize=(20,10))
-st.pyplot(sns.heatmap(df_mpg.corr(), annot=True, cmap="crest").figure)
+df_mpg1=df_mpg.select_dtypes(include=['number'])
+st.pyplot(sns.heatmap(df_mpg1.corr(), annot=True, cmap="crest").figure)
 
 st.subheader('Displot')
 st.pyplot(sns.displot(df_mpg, x="horsepower", hue="origin", kind="kde", rug=True).figure)
